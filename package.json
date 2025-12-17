@@ -1,0 +1,33 @@
+{
+  "name": "n8n-nodes-p8p-controller",
+  "version": "1.0.0",
+  "description": "P8P Controller for n8n",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "nodes": [
+      "dist/nodes/P8PTrigger/P8PTrigger.node.js",
+      "dist/nodes/P8PResponse/P8PResponse.node.js",
+      "dist/nodes/P8PActions/P8PActions.node.js"
+    ],
+    "credentials": [
+      "dist/credentials/P8PApi.credentials.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "n8n-workflow": "*",
+    "n8n-core": "*",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*",
+    "n8n-core": "*"
+  }
+}
